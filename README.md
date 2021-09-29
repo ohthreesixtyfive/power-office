@@ -11,6 +11,7 @@ In Power Automate
 - Select 'Populate-Office-Template' to insert the Scope into your Flow.
 - Provide inputs from your Trigger for the actions inside of the 'Inputs You Provide' scope.
 - As desired, add actions to the Yes/No branches of 'If-Send-Docuent-To-Is-Not-Empty' Condition.
+- Update all SharePoint Actions with the proper Connection References.
 
 In Your Application
 - Add Flow to your application.
