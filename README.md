@@ -3,8 +3,10 @@ A Power Automate Scope Definition to Populate Office Templates (Word/PowerPoint)
 
 ## Minimum Path to Use
 
+Here in GitHub
+- Copy the entirety of [scope_definition.json](https://github.com/ohthreesixtyfive/poweroffice/blob/main/scope_definition.json) to your clipboard.
+
 In Power Automate
-- Copy scope_definition.json to your clipboard.
 - In Power Automate/Flow, click '+ New step'.
 - Select 'My clipboard'.
 - Press [Ctrl] + 'V' to make the Scope available in Microsoft Flow.
