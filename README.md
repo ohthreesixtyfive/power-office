@@ -16,4 +16,5 @@ In Power Automate
 In Your Application
 - Add Flow to your application.
 - Convert your 2-Column Collection (Key/Value) into a JSON String using the JSON() function and provide that as the input to whatever populates the Replacement-Table-String action.
+  - If you'd like to test out the *repeating table functionality*, provide a JSON String representation of your desired table's collection as a replacement value.
 - Convert your 3-Column Collection (Filename/Url/Content) into a JSON String using the JSON() function and provide that as the input to whatever populates the Image-Replacement-String action.
