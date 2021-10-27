@@ -1,5 +1,5 @@
 {
-	"id": "dbafb489-4abb-466e-969d-4f4c-7ba2501f",
+	"id": "84daf34f-d4da-40b6-a881-aa6d-baa21f86",
 	"brandColor": "#8C3900",
 	"connectionReferences": {
 		"shared_sharepointonline": {
@@ -341,7 +341,7 @@
 									},
 									"Split-Decision": {
 										"type": "Compose",
-										"inputs": "@if(\r\n\tempty(\r\n\t\tbody('Match-Current-Split-to-Placeholder')\r\n\t),\r\n\titem(),\r\n\tcoalesce(\r\n\t\tfirst(body('Retrieve-Table-From-Repeating-Tables'))?['Value'],\r\n\t\treplace(\r\n\t\turiComponentToString(\r\n\t\t\treplace(\r\n\t\t\t\turiComponent(\r\n\t\t\t\t\tfirst(body('Match-Current-Split-to-Placeholder'))['Value']\r\n\t\t\t\t),\r\n\t\t\t\t'%0A',\r\n\t\t\t\tif(\r\n\t\t\t\t\tequals(\r\n\t\t\t\t\t\toutputs('Template-Type'),\r\n\t\t\t\t\t\t'pptx'\r\n\t\t\t\t\t),\r\n\t\t\t\t\t'</a:t></a:r></a:p><a:p><a:r><a:t>',\r\n\t\t\t\t\t'</w:t></w:r></w:p><w:p><w:r><w:t>'\r\n\t\t\t\t)\r\n\t\t\t)\r\n\t\t),\r\n\t\t'&',\r\n\t\t'&amp;'\r\n\t\t)\r\n\t)\r\n)",
+										"inputs": "@if(\r\n\tempty(\r\n\t\tbody('Match-Current-Split-to-Placeholder')\r\n\t),\r\n\titem(),\r\n\tif(\r\n\t\tand(\r\n\t\t\tstartsWith(coalesce(first(body('Match-Current-Split-to-Placeholder'))?['Value'], ''), '['),\r\n\t\t\tendsWith(coalesce(first(body('Match-Current-Split-to-Placeholder'))?['Value'], ''), ']')\r\n\t\t),\r\n\t\tfirst(body('Retrieve-Table-From-Repeating-Tables'))?['Value'],\r\n\t\treplace(\r\n\t\turiComponentToString(\r\n\t\t\treplace(\r\n\t\t\t\turiComponent(\r\n\t\t\t\t\tfirst(body('Match-Current-Split-to-Placeholder'))['Value']\r\n\t\t\t\t),\r\n\t\t\t\t'%0A',\r\n\t\t\t\tif(\r\n\t\t\t\t\tequals(\r\n\t\t\t\t\t\toutputs('Template-Type'),\r\n\t\t\t\t\t\t'pptx'\r\n\t\t\t\t\t),\r\n\t\t\t\t\t'</a:t></a:r></a:p><a:p><a:r><a:t>',\r\n\t\t\t\t\t'</w:t></w:r></w:p><w:p><w:r><w:t>'\r\n\t\t\t\t)\r\n\t\t\t)\r\n\t\t),\r\n\t\t'&',\r\n\t\t'&amp;'\r\n\t\t)\r\n\t)\r\n)",
 										"runAfter": {
 											"Is-This-A-Repeating-Table": [
 												"Succeeded"
